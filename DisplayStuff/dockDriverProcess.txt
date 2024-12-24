@@ -1,0 +1,40 @@
+go to:
+https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
+currently the release is:
+https://www.synaptics.com/products/displaylink-usb-graphics-software-ubuntu-61?filetype=exe
+accept terms, follow this guide:
+https://support.displaylink.com/knowledgebase/articles/684649
+
+1.IMPORTANT: Make sure your Ubuntu distibution is up to date by running sudo apt-get update and then sudo apt-get dist-upgrade from a Terminal. If the distribution is not up to date, you may find issues with blank or corrupted USB displays.
+2. Extract the .run file from the .zip file.
+
+cd ~/Downloads
+sudo apt install unzip
+unzip <filename>.zip
+unzip "DisplayLink USB Graphics Software for Ubuntu6.1-EXE.zip"
+
+
+
+3. Make the .run file executable by right clicking on the file and choose "Properties".
+properties > permissions > Allow executing files as program (check this box its probably unchecked)
+
+
+4. Install the DKMS framework from a Terminal using the command 
+
+sudo apt-get install dkms
+
+5. Install the libdrm-dev library from a Terminal using the command 
+
+sudo apt-get install libdrm-dev
+
+6. Execute the DisplayLink .run file using the Terminal, by cding to the directory containing the .run file and running the command 
+
+sudo ./displaylink-driver-xxxxx.run (where xxxx is the version number)
+
+details:
+cd ~/Downloads
+sudo ./displaylink-driver-6.1.0-17.run
+
+7. The DisplayLink software should install as shown below.
+8. For uninstallation procedure see here.
+everything not linked here is in the article
