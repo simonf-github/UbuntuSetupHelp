@@ -53,24 +53,7 @@ fi
 log "Moving the taskbar to the bottom of the screen."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM || handle_failure "Failed to move the taskbar."
 
-# Unpin Thunderbird Mail and Rhythmbox
-log "Unpinning Thunderbird Mail and Rhythmbox."
-gsettings set org.gnome.shell favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed "s/'thunderbird.desktop', //;s/, 'rhythmbox.desktop'//")" || handle_failure "Failed to unpin apps."
 
-# Install applications
-log "Installing applications."
-
-# Install VSCode and Discord using snap
-log "Installing VSCode and Discord using snap."
-sudo snap install code --classic || handle_failure "Failed to install VSCode via snap."
-sudo snap install discord || handle_failure "Failed to install Discord via snap."
-
-# Install CopyQ
-log "Installing CopyQ."
-sudo apt install -y copyq || handle_failure "Failed to install CopyQ."
-
-#install git
-sudo apt install -y git
 
 # Pin applications
 log "Pinning applications to the taskbar."

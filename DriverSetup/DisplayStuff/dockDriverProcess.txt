@@ -1,3 +1,5 @@
+ok so theres this monitor dock that needs displaylink drivers so this is how to install those
+
 go to:
 https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
 currently the release is:

@@ -1,3 +1,5 @@
+#this is a script to automatically boot into windows from linux with a dual boot steup like I have
+#havent tested many cases so use at your own risk
 #!/bin/bash
 
 # Find the Windows EFI entry

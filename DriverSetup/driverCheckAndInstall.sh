@@ -1,3 +1,4 @@
+#maybe helpful
 #!/bin/bash
 
 # Update the package list
