@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-bash installApplications.sh || echo "install applications failed, continuing..."
+bash installations/installApplications.sh || echo "install applications failed, continuing..."
 
 #taskbar stuff
 bash TaskbarStuff/unpinStuff.sh || echo "unpin stuff failed, continuing..."
