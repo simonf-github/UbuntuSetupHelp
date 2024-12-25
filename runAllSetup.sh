@@ -2,11 +2,12 @@
 
 #!/bin/bash
 
-#install applications
-#remove unneeded taskbar pins
-#configure
+bash installApplications.sh || echo "install applications failed, continuing..."
+
+#taskbar stuff
+bash TaskbarStuff/unpinStuff.sh || echo "unpin stuff failed, continuing..."
+bash TaskbarStuff/pinStuff.sh || echo "pin stuff failed, continuing..."
+bash TaskbarStuff/configureTaskbar.sh || echo "configure taskbar failed, continuing..."
 
 
-bash script1.sh || echo "script1.sh failed, continuing..."
-bash script2.sh || echo "script2.sh failed, continuing..."
-bash script3.sh || echo "script3.sh failed, continuing..."
+bash MiscPreferences/configureSystem.sh || echo "configure misc system stuff failed, continuing..."

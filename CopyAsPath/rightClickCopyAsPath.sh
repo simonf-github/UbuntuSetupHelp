@@ -21,6 +21,7 @@ sudo apt install -y nautilus-extensions xclip python3 python3-pip
 # Install Python dependencies
 print_message "Installing Python dependencies for CopyAsPathExtension"
 pip3 install pyperclip notify2
+sudo apt install xclip -y
 
 # Create the Nautilus Python extension directory
 print_message "Setting up 'Copy as Path' Python Nautilus extension"

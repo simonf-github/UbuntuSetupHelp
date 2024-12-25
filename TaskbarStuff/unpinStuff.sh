@@ -15,6 +15,5 @@ handle_failure() {
 
 # Unpin Thunderbird Mail and Rhythmbox
 log "Unpinning Thunderbird Mail and Rhythmbox."
-gsettings set org.gnome.shell favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed "s/'thunderbird.desktop', //;s/, 'rhythmbox.desktop'//")" || handle_failure "Failed to unpin Thunderbird Mail and Rhythmbox."
-
+gsettings set org.gnome.shell favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed "s/'libreoffice-writer.desktop', //;s/, 'libreoffice-writer.desktop'//")"
 log "Successfully unpinned Thunderbird Mail and Rhythmbox."
